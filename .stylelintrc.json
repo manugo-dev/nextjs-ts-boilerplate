@@ -1,0 +1,8 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-config-standard-scss", "stylelint-config-sass-guidelines", "stylelint-config-idiomatic-order"],
+  "formatter": "stylelint-checkstyle-formatter",
+  "plugins": ["stylelint-scss", "stylelint-order"],
+  "rules": {
+    "selector-class-pattern": "^([a-z][a-z0-9]*)(_[a-z0-9]+)*$"
+  }
+}

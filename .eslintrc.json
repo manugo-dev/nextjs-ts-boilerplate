@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "es2022": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "parser": "@typescript-eslint/parser"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "unicorn", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next",
+    "next/core-web-vitals",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": "error",
+    "no-multiple-empty-lines": "error",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", "internal", "sibling", "parent", "index"],
+        "pathGroups": [
+          { "pattern": "config/**", "group": "internal" },
+          { "pattern": "components/**", "group": "internal" },
+          { "pattern": "contexts/**", "group": "internal" },
+          { "pattern": "hooks/**", "group": "internal" },
+          { "pattern": "env/**", "group": "internal" },
+          { "pattern": "models/**", "group": "internal" },
+          { "pattern": "pages/**", "group": "internal" },
+          { "pattern": "scss/**", "group": "internal" },
+          { "pattern": "services/**", "group": "internal" },
+          { "pattern": "mocks/**", "group": "internal" },
+          { "pattern": "types/**", "group": "internal" },
+          { "pattern": "utils/**", "group": "internal" }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "unicorn/better-regex": "error",
+    "unicorn/filename-case": ["error", { "case": "camelCase" }]
+  }
+}
