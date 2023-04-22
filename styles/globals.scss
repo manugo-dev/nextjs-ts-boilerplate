@@ -1,1 +1,11 @@
 @import "./reset";
+
+html,
+body {
+  background: #fff;
+  font-weight: 300;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
